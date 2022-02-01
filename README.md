@@ -14,22 +14,22 @@
 </p>
 
 
-### [Features]
+<b><i>Features</i></b>
 
 Here's the list of features supported by the bot
 
 
-• Searching on multiple TeamDrives with Recursive Search
-• Cloning data from Google Drive or GDToT links
-• Counting data from Google Drive or GDToT links
-• Deleting data from Google Drive
-• Setting data permission to 'Anyone with the link' directly from the bot
-• MongoDB for storing authorized users
-• Deploying with Docker
-• Deploying to Heroku with GitHub Workflow
-• Generating Index link of data
-• Service Account (SA) for bypassing Google's limits
-• Executing bash commands from the bot
+• Searching on multiple TeamDrives with Recursive Search<br>
+• Cloning data from Google Drive or GDToT links<br>
+• Counting data from Google Drive or GDToT links<br>
+• Deleting data from Google Drive<br>
+• Setting data permission to 'Anyone with the link' directly from the bot<br>
+• MongoDB for storing authorized users<br>
+• Deploying with Docker<br>
+• Deploying to Heroku with GitHub Workflow<br>
+• Generating Index link of data<br>
+• Service Account (SA) for bypassing Google's limits<br>
+• Executing bash commands from the bot<br>
 
 ### Getting started
 > This guide will cover everything for deploying the bot properly. Focus and patience are needed are as always.
@@ -231,7 +231,7 @@ docker-compose up
 /search -d <query>
 ```
 
-### [Commands]
+<b><i>Commands</i></b>
 
 List of commands for the bot
 
@@ -258,7 +258,7 @@ help - Get help
 - Click on *Edit Bot* -> *Edit Commands*
 - Then send the [commands list]
 
-### [Changelog]
+<b><i>Changelog</i></b>
 
 **Here's the list of changes made to the bot**
 
@@ -281,7 +281,7 @@ help - Get help
 - Added permission module for setting data permission to 'Anyone with the link' from the bot
 - Added option to use token.json (DRIVE_TOKEN) file for authorization when the bot gives error while using SA
 
-### [FAQ - Frequently Asked Questions]
+<b><i>FAQ - Frequently Asked Questions</i></b>
 
 ### What's this bot about?
 This is a telegram bot writen in python for searching data on Google Drive. Supports multiple Shared Drives (TDs). Able to clone data from drive.
@@ -345,7 +345,7 @@ Use `py` instead of `python3`
 ### How to fix when the bot gets stuck while searching?
 Check the log file first. If it doesn't help then go [here](https://github.com/missemily2022/GDriveUtils/tree/master/bot/helper/drive_utils/gdriveTools.py#L30) and change the `telegraph_limit` value to a lower value. Default is 120.
 
-### [Credits]
+<b><i>Credits</i></b>
 
 List of contributors of the bot
 - [Sreeraj V R](https://github.com/SVR666) - Created the bot
