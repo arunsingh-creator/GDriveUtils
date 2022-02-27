@@ -9,19 +9,20 @@
 
 ## GDriveUtils
 
-> A simple Telegram Bot for searching data on Google Drive. Able to clone data from Drive or GDToT links. Supports MongoDB for storing authorized users record.
-
+> A simple and fast Telegram Bot for searching data on Google Drive. Uses Multi-threading and Google's batch request for fast search results, Also display search results on multiple telegraph pages. Can clone data from Drive/GDToT/AppDrive/DriveApp links. Supports MongoDB for storing authorized users record.
 </p>
 
 
 <b><i>Features</i></b>
 
-Here's the list of features supported by the bot
+Here's the list of features supported by the bot 
 
 
 • Searching on multiple TeamDrives with Recursive Search<br>
-• Cloning data from Google Drive or GDToT links<br>
-• Counting data from Google Drive or GDToT links<br>
+• Search with multi-threading and batch requests for fast results<br>
+• Display Search results on multiple telegraph pages<br>
+• Cloning data from Google Drive / AppDrive / DriveApp / GDToT links<br>
+• Counting data from Google Drive links<br>
 • Deleting data from Google Drive<br>
 • Setting data permission to 'Anyone with the link' directly from the bot<br>
 • MongoDB for storing authorized users<br>
@@ -146,7 +147,8 @@ python3 dtoken.py
 - `DRIVE_INDEX_URL`: Refer to maple's [GDIndex](https://github.com/maple3142/GDIndex/) or Bhadoo's [Google Drive Index](https://gitlab.com/ParveenBhadooOfficial/Google-Drive-Index)<br>**Note:** The Index URL should not have any trailing '**/**'
 - `ACCOUNTS_ZIP_URL`: Archive the **accounts** folder to a zip file. Then fill the direct download link of that file.
 - `DRIVE_LIST_URL`: Upload the **drive_list** file on [GitHub Gist](https://gist.github.com). Now open the raw link of that gist and remove Commit ID from the link. Then fill the var with that link.<br>**Note:** This var is required for Deploying with [Workflow] to Heroku.
-
+- `MAX_THREADS` : Number to threads to use while searching gdrive. Recomended value is 4*core count (4 for heroku). But result time may vary dependending upon machine, so test with different values and see which gives results in least time.
+Note: Setting it too high or too low may take more time to display results than expected.
 
 ### Deploying the bot
 > There are two guides available for deploying the bot
@@ -280,6 +282,8 @@ help - Get help
 - Added MongoDB support for storing authorized users
 - Added permission module for setting data permission to 'Anyone with the link' from the bot
 - Added option to use token.json (DRIVE_TOKEN) file for authorization when the bot gives error while using SA
+- Added multi-page + multi-account telegra.ph support for search results
+- Added multi-threading, batch-requests for search
 
 <b><i>FAQ - Frequently Asked Questions</i></b>
 
@@ -353,3 +357,5 @@ List of contributors of the bot
 - [Snape](https://github.com/snape541) - Fixed some bugs
 - [Anas](https://github.com/anasty17) - Added count, delete and shell modules
 - [Yusuf](https://github.com/oxosec) - Added GDToT support
+- [Levi](https://github.com/l3v11) - A noob who touched some codes and re-wrote the whole wiki from scratch
+- [Hrutvik](https://github.com/hsj51) - Added multi-threading, batch-requests for search and multi-page+multi-account telegraph for search results
